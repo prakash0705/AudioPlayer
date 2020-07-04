@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="music.css">
+</head>
+
+
+<br>
+<body>
+	
+	<div class="header">
+	<h3 class="header-text" align="center">Sample Music Player Site</h3>
+	</div>
+	<div class="card prices" style="width: 100%	;" align="center"> 
+    <div class="card-body" >
+    <div class="body">
+	<div class="form-group purple-border">
+        <br>
+        <label for="Songs"<h4><b>Click Play to enjoy world of music</b></h4></label>
+		<label for="Songs"<h4><b>& Songs make take some time to load</b></h4></label>
+		<br>
+		<label for="Songs"><h4><b>Now Playing</b></h4></label>
+        <br>
+        <textarea maxlength = "20" style="width:500px " id = "songName" class="form-control" id="Songs" rows="1" disabled></textarea>
+    </div>
+
+    <br>
+    <audio id="playlist">
+        <source src="Munbe.mp3" type="audio/mpeg" id = "player">
+    </audio>
+    <button style="font-size:15px" onclick = "playSong()" type = "button" class="button button1 .btn-primary">
+        <b>Play</b>
+    </button>
+    <button style="font-size:15px" onclick = "pauseSong()" type = "button" class="button button2 .btn-primary">
+        <b>Pause</b>
+    </button>
+    <br><br>
+    <button style="font-size:15px" id="change" onclick="changeSong()" class="button button3 ">
+        <b>Change</b>
+    </button>
+    <br>
+	<div><h4 align="left">&nbsp;&nbsp;<b><u>Available song list</u></b></h4></div>
+	<div class="songListTrack" align="center">
+		<table id="songList" >
+	<tr >
+	<td onclick="changeSong(x.rowIndex)">	
+	</td>
+	</table>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+    <script src="music.js">
+    </script>
+</body>
+
+</html>
